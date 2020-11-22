@@ -30,13 +30,7 @@ def fopen():
     text1 = file1.name
 
 
-def detector():
-    # construct the argument parse and parse the arguments
-    #ap = argparse.ArgumentParser()
-    #ap.add_argument("-i", "--input", type=str, default="", help="path to (optional) input video file")
-    #ap.add_argument("-o", "--output", type=str, default="", help="path to (optional) output video file")
-    #ap.add_argument("-d", "--display", type=int, default=1, help="whether or not output frame should be displayed")
-    #args = vars(ap.parse_args())
+def detector(): 
 
     # load the COCO class labels our YOLO model was trained on
     labelsPath = os.path.sep.join([config.MODEL_PATH, "coco.names"])
@@ -152,20 +146,7 @@ def detector():
     output_movie.release()
     cv2.destroyAllWindows()
 
-        # if an output video file path has been supplied and the video
-        # writer has not been initialized, do so now
-        #if writer is None:
-            # initialize our video writer
-            #fourcc = cv2.VideoWriter_fourcc(*"MJPG")
-            #writer = cv2.VideoWriter(args["output"], fourcc, 25,
-                                     #(frame.shape[1], frame.shape[0]), True)
-
-
-        # if the video writer is not None, write the frame to the output
-        # video file
-        #if writer is not None:
-        #output_movie.write(frame)
-
+        
 # people counting on video input
 def counter():
 
